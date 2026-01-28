@@ -1,6 +1,3 @@
-# M.VBeautiful-Booking-System
-A secure, full-stack appointment management platform featuring Zero Trust architecture, automated notifications, and real-time scheduling logic.
-
 # M.VBeautiful - Secure Booking & Management System
 
 A production-ready booking platform designed for beauty professionals, focusing on security, automation, and seamless user experience.
