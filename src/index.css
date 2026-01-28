@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 340 10% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 10% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 10% 20%;
+
+    --primary: 340 60% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 190 50% 75%;
+    --secondary-foreground: 340 10% 20%;
+
+    --muted: 340 20% 96%;
+    --muted-foreground: 340 10% 45%;
+
+    --accent: 45 80% 60%;
+    --accent-foreground: 340 10% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 20% 90%;
+    --input: 340 20% 90%;
+    --ring: 340 60% 65%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(190 50% 80%), hsl(340 60% 80%));
+    --gradient-hero: linear-gradient(180deg, hsl(340 30% 97%), hsl(0 0% 100%));
+
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+  }
+
+  .dark {
+    --background: 340 20% 8%;
+    --foreground: 340 10% 95%;
+
+    --card: 340 20% 12%;
+    --card-foreground: 340 10% 95%;
+
+    --popover: 340 20% 12%;
+    --popover-foreground: 340 10% 95%;
+
+    --primary: 340 60% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 190 40% 30%;
+    --secondary-foreground: 190 20% 95%;
+
+    --muted: 340 20% 15%;
+    --muted-foreground: 340 10% 65%;
+
+    --accent: 45 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 20% 20%;
+    --input: 340 20% 20%;
+    --ring: 340 60% 65%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(190 40% 25%), hsl(340 50% 30%));
+    --gradient-hero: linear-gradient(180deg, hsl(340 20% 10%), hsl(340 20% 8%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gold-shimmer {
+    background: linear-gradient(90deg, hsl(45 80% 55%), hsl(45 90% 70%), hsl(45 80% 55%));
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: -100% 0; }
+    50% { background-position: 100% 0; }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeInUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
