@@ -1,0 +1,16 @@
+project_id = "fkxzzvfluwwzxsntzugi"
+
+[functions.send-booking-notification]
+verify_jwt = false
+
+[functions.send-booking-reminder]
+verify_jwt = false
+
+[functions.send-cancellation-notification]
+verify_jwt = false
+
+[functions.google-calendar-auth]
+verify_jwt = false
+
+[functions.create-booking]
+verify_jwt = true
