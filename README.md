@@ -1,3 +1,5 @@
+![Capa da Auditoria](img_mvbeautyful.jpg)
+
 # M.VBeautiful - Secure Booking & Management System
 
 A production-ready booking platform designed for beauty professionals, focusing on security, automation, and seamless user experience.
